@@ -496,10 +496,10 @@ function loadStructure (arg_str) {
 
   var Q = argvs[9]
   var G = argvs[10]
-  var ent_info = argvs[11]
+  var frames = argvs[11]
+  var lip_info = argvs[12]
 
   var if_ribosome = false
-  if (ent_info.startsWith('P')) {if_ribosome = true} 
 
   document.getElementById("info").innerHTML = "Loading structures... (if no response for a long time, please refresh this page)"
   
@@ -679,7 +679,9 @@ function loadStructure (arg_str) {
 //        ent_info = "This is a transient intermediate with <b>shallow</b> entanglements. Disentanglement process only involves sliding of "+words[1]+"."
 //      }
 //    }
-    document.getElementById("info").innerHTML = "<i>Q</i><sub>act</sub> = "+Q+" and <i>G</i> = "+G+"<br>"+ent_info
+
+    document.getElementById("info").innerHTML = "<i>Q</i><sub>act</sub> = "+Q+" and <i>G</i> = "+G+"<br>"+"Frames = "+frames+"<br>"
+    document.getElementById("info").innerHTML = "TEST"
 
     // Get Ca trace
     var CA_cor_list = [];
@@ -741,10 +743,10 @@ addElement(document.getElementById("cntrl_panel"), createElement("span", {
      "font-size": "1.6vmin"}))
 
 // Select syntax: 
-// Github file name & chain length & circle_sel & thread_sel & Pdb ID & chain ID & offset & ligand_sel & superpose_sel & Q & G & info
+// Github file name & chain length & circle_sel & thread_sel & Pdb ID & chain ID & offset & ligand_sel & superpose_sel & Q & G & frames & LiPMS cutsites
 //info "frames;"
 var StructSelect = createSelect([
-  [ "1zmr_0_rebuilt&387&269-317&(253-263)&1zmr&A&0&(260)&(1-387)&1.0&0.3&Frames: (0,2,3)", "1zmr_0_rebuilt test" ],
+  [ "1zmr_0_rebuilt&387&269-317&(253-263)&1zmr&A&0&(260,300)&(1-387)&1.0&0.3&(0,2,3)&[A260, 1.2, 2];[D300, -1.4, 3]", "1zmr_0_rebuilt test" ],
 ], {
   onchange: function (e) {
     loadStructure(e.target.value)
