@@ -742,8 +742,9 @@ addElement(document.getElementById("cntrl_panel"), createElement("span", {
 
 // Select syntax: 
 // Github file name & chain length & circle_sel & thread_sel & Pdb ID & chain ID & offset & ligand_sel & superpose_sel & Q & G & info
+//info "frames;"
 var StructSelect = createSelect([
-  [ "1zmr_0_rebuilt&387&269-317&(253-263)&1zmr&A&0&(260)&(1-387)&1.0&0.3&(1,2,3)", "1zmr_0_rebuilt test" ],
+  [ "1zmr_0_rebuilt&387&269-317&(253-263)&1zmr&A&0&(260)&(1-387)&1.0&0.3&Frames: (0,2,3)", "1zmr_0_rebuilt test" ],
 ], {
   onchange: function (e) {
     loadStructure(e.target.value)
