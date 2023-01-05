@@ -743,7 +743,7 @@ addElement(document.getElementById("cntrl_panel"), createElement("span", {
 // Select syntax: 
 // Github file name & chain length & circle_sel & thread_sel & Pdb ID & chain ID & offset & ligand_sel & superpose_sel & Q & G & info
 var StructSelect = createSelect([
-  [ "1zmr_0_rebuilt.pdb&387&269-317&(253-263)&1zmr&A&0&(260)&(1-387)&1.0&0.3&HELLO", "1zmr_0_rebuilt test" ],
+  [ "1zmr_0_rebuilt&387&269-317&(253-263)&1zmr&A&0&(260)&(1-387)&1.0&0.3&HELLO", "1zmr_0_rebuilt test" ],
 ], {
   onchange: function (e) {
     loadStructure(e.target.value)
