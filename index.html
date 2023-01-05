@@ -104,24 +104,6 @@
 <div style="width:80%; height:5%; display: table; margin-left: 10%;">
   <div id="info" style="text-align: center; font-size: 1.0vw; font-family: Arial; background-color: #FFF0F5; vertical-align: middle; display: table-cell;"></div>
 </div>
-
-<table id="table1" style="style="width:80%; height:auto; display: table; margin-left: 10%;">
-  <tr>
-    <th>PK_Cutsite</th>
-    <th>log<sub>2</sub>(R/N)</th>
-    <th>-Log<sub>10</sub>(pvalue)</th>
-  </tr>
-  <tr>
-    //<td>Alfreds Futterkiste</td>
-    //<td>Maria Anders</td>
-    //<td>Germany</td>
-  </tr>
-  <tr>
-    //<td>Centro comercial Moctezuma</td>
-    //<td>Francisco Chang</td>
-    //<td>Mexico</td>
-  </tr>
-</table>
     
 <div id="legend" style="width:80%; height:5%; text-align: center; margin-top:0.5%; margin-left: 10%;">
   <svg width="15%" height="50%" viewBox="0 0 200 20">
@@ -701,8 +683,6 @@ function loadStructure (arg_str) {
     document.getElementById("info").innerHTML = "<i>Q</i><sub>act</sub> = "+Q+" and <i>G</i> = "+G+" and "+"Sampled MSM Frames = "+frames+"<br>"
     document.getElementById("info").innerHTML += "PK_Cutsite     log<sub>2</sub>(R/N)     -Log<sub>10</sub>(pvalue)<br>"
     document.getElementById("info").innerHTML += lip_info
-    document.getElementById("info").innerHTML += "<tr><th>PK_Cutsite</th><th>log<sub>2</sub>(R/N)</th><th>-Log<sub>10</sub>(pvalue)</th></tr>"
-    document.getElementById("info").innerHTML += "<tr><th>A260</th><th>1.2</th><th>4</th></tr>"
 
 
     // Get Ca trace
@@ -768,7 +748,7 @@ addElement(document.getElementById("cntrl_panel"), createElement("span", {
 // Github file name & chain length & circle_sel & thread_sel & Pdb ID & chain ID & offset & ligand_sel & superpose_sel & Q & G & frames & LiPMS cutsites
 //info "frames;"
 var StructSelect = createSelect([
-        [ "1zmr_0_rebuilt&387&269-317&(253-263)&1zmr&A&0&(300) or (260)&(1-387)&1.0&0.3&(0,2,3)&A260 1.2    2<br>D300 -1.4   3<br>", "1zmr_0_rebuilt test" ],
+        [ "1zmr_0_rebuilt&387&269-317&(253-263)&1zmr&A&0&(300) or (260)&(1-387)&1.0&0.3&(0,2,3)&A260 | 1.2 | 2<br>D300 | -1.4 | 3<br>", "1zmr_0_rebuilt test" ],
 ], {
   onchange: function (e) {
     loadStructure(e.target.value)
