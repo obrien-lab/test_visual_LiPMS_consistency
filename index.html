@@ -680,8 +680,11 @@ function loadStructure (arg_str) {
 //      }
 //    }
 
-    document.getElementById("info").innerHTML = "<i>Q</i><sub>act</sub> = "+Q+" and <i>G</i> = "+G+"<br>"+"Frames = "+frames+"<br>"
-    document.getElementById("info").innerHTML += "TEST"
+    document.getElementById("info").innerHTML = "<i>Q</i><sub>act</sub> = "+Q+" and <i>G</i> = "+G+" and "+"Sampled MSM Frames = "+frames+"<br>"
+    document.getElementById("info").innerHTML += "Cutsite   log2(R/N)   -Log10(pvalue)<br>"
+    document.getElementById("info").innerHTML += lip_info
+
+
 
     // Get Ca trace
     var CA_cor_list = [];
@@ -746,7 +749,7 @@ addElement(document.getElementById("cntrl_panel"), createElement("span", {
 // Github file name & chain length & circle_sel & thread_sel & Pdb ID & chain ID & offset & ligand_sel & superpose_sel & Q & G & frames & LiPMS cutsites
 //info "frames;"
 var StructSelect = createSelect([
-  [ "1zmr_0_rebuilt&387&269-317&(253-263)&1zmr&A&0&(260,300)&(1-387)&1.0&0.3&(0,2,3)&[A260, 1.2, 2];[D300, -1.4, 3]", "1zmr_0_rebuilt test" ],
+        [ "1zmr_0_rebuilt&387&269-317&(253-263)&1zmr&A&0&(260,300)&(1-387)&1.0&0.3&(0,2,3)&A260 1.2    2<br>D300 -1.4   3<br>", "1zmr_0_rebuilt test" ],
 ], {
   onchange: function (e) {
     loadStructure(e.target.value)
