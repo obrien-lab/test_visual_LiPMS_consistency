@@ -701,6 +701,7 @@ function loadStructure (arg_str) {
     document.getElementById("info").innerHTML = "<i>Q</i><sub>act</sub> = "+Q+" and <i>G</i> = "+G+" and "+"Sampled MSM Frames = "+frames+"<br>"
     document.getElementById("info").innerHTML += "PK_Cutsite     log<sub>2</sub>(R/N)     -Log<sub>10</sub>(pvalue)<br>"
     document.getElementById("info").innerHTML += lip_info
+    document.getElementById("info").innerHTML += "<tr><th>PK_Cutsite</th><th>log<sub>2</sub>(R/N)</th><th>-Log<sub>10</sub>(pvalue)</th></tr>"
 
 
 
@@ -829,7 +830,7 @@ var ligandCheckbox = createElement("input", {
      margin: "0.6vmin" })
 addElement(document.getElementById("cntrl_panel"), ligandCheckbox)
 var label = createElement("label", {
-  innerText: "Ligands",
+  innerText: "PKcutsites",
   }, { top: "57%", 
        left: "14%",
        "font-family": "Arial", 
