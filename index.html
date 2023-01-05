@@ -460,7 +460,8 @@ function loadStructure (arg_str) {
   }
 
   //var url_2 = "rcsb://"+argvs[4] //url for native protein pdb
-  var url_2 = "https://files.rcsb.org/download/"+argvs[4]+".pdb"
+  //var url_2 = "https://files.rcsb.org/download/"+argvs[4]+".pdb"
+  var url_2 = "./structure_pdb/"+argvs[4]+"_native.pdb"
   var chain_sel = ":"+argvs[5]
   var offset = Number(argvs[6])
   var s5 = chain_sel + " and " + (1+offset).toString()+"-"+(Number(argvs[1])+offset).toString() //select protein
