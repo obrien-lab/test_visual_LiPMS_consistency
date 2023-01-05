@@ -74,7 +74,7 @@
         border-collapse: collapse;
       }
       th, td {
-        padding: 15px;
+        padding: 5px;
       }
     </style>
 </head>
@@ -112,7 +112,7 @@
 <div style="width:80%; height:5%; display: table; margin-left: 10%;">
   <div id="info" style="text-align: center; font-size: 1.0vw; font-family: Arial; background-color: #FFF0F5; vertical-align: middle; display: table-cell;"></div>
  
-    <table>
+    <table id="table1">
       <tr>
         <td>
           this is my first cell
@@ -703,6 +703,8 @@ function loadStructure (arg_str) {
     document.getElementById("info").innerHTML = "<i>Q</i><sub>act</sub> = "+Q+" | <i>G</i> = "+G+" | "+"Sampled MSM Frames = "+frames+"<br>"
     document.getElementById("info").innerHTML += "PK_Cutsite | log<sub>2</sub>(R/N) | -Log<sub>10</sub>(pvalue)<br>"
     document.getElementById("info").innerHTML += lip_info
+      
+    document.getElementById("table1").innerHTML += "<tr><td>hello</td><td>Allen</td><tr>"
 
 
     // Get Ca trace
