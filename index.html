@@ -751,12 +751,19 @@ function loadStructure (arg_str) {
 
 //////////////////////// Generate page contents //////////////////////////////
 addElement(document.getElementById("cntrl_panel"), createElement("span", {
-  innerText: "Select an example below:\n<small>PDB/ent_state_ID/rep_ent_ID</small>"
+  innerText: "Select an example below"
 }, { top: "1%", 
      left: "1%", 
      "font-family": "Arial", 
      "font-size": "1.6vmin"}))
 
+addElement(document.getElementById("cntrl_panel"), createElement("span", {
+  innerText: "PDB/ent_state_ID/rep_ent_ID"
+}, { top: "5%", 
+     left: "1%", 
+     "font-family": "Arial", 
+     "font-size": "1vmin"}))   
+    
 // Select syntax: 
 // Github file name & chain length & circle_sel & thread_sel & Pdb ID & chain ID & offset & ligand_sel & superpose_sel & Q & G & frames & LiPMS cutsites
 //info "frames;"
