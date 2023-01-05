@@ -694,8 +694,7 @@ function loadStructure (arg_str) {
 //    }
 
     document.getElementById("info").innerHTML = "<i>Q</i><sub>act</sub> = "+Q+" | <i>G</i> = "+G+" | "+"Sampled MSM Frames = "+frames+"<br>"
-    document.getElementById("table1").innerHTML = "<tr><td>PK_Cutsite</td><td>log<sub>2</sub>(R/N)</td><td>-Log<sub>10</sub>(pvalue)</td></tr>" + lip_info
-
+    document.getElementById("table1").innerHTML += "<tr><td>PK_Cutsite</td><td>log<sub>2</sub>(R/N)</td><td>-Log<sub>10</sub>(pvalue)</td></tr>" + lip_info
       
 
 
@@ -752,7 +751,7 @@ function loadStructure (arg_str) {
 
 //////////////////////// Generate page contents //////////////////////////////
 addElement(document.getElementById("cntrl_panel"), createElement("span", {
-  innerText: "Select an example below:"
+  innerText: "Select an example below:\nPDB ent_state_ID rep_ent_ID"
 }, { top: "1%", 
      left: "1%", 
      "font-family": "Arial", 
