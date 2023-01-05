@@ -751,7 +751,7 @@ function loadStructure (arg_str) {
 
 //////////////////////// Generate page contents //////////////////////////////
 addElement(document.getElementById("cntrl_panel"), createElement("span", {
-  innerText: "Select an example below:\nPDB/ent_state_ID/rep_ent_ID"
+  innerText: "Select an example below:\n<small>PDB/ent_state_ID/rep_ent_ID</small>"
 }, { top: "1%", 
      left: "1%", 
      "font-family": "Arial", 
@@ -777,7 +777,7 @@ var StructSelect = createSelect([
   onchange: function (e) {
     loadStructure(e.target.value)
   }
-}, { top: "15%", 
+}, { top: "20%", 
      left: "1%",
      "font-family": "Arial", 
      "font-size": "1.2vmin"})
@@ -790,7 +790,7 @@ var centerButton = createElement("input", {
   onclick: function () {
     reset_view()
   }
-}, { top: "15%", 
+}, { top: "20%", 
      left: "48%",
      "font-family": "Arial", 
      "font-size": "1.1vmin" })
@@ -806,7 +806,7 @@ var downloadButton = createElement("input", {
     var url = "./structure_pdb/"+argvs[0]+".pdb" //url for state structure
     window.open(url)
   }
-}, { top: "15%", 
+}, { top: "20%", 
      left: "70%",
      "font-family": "Arial", 
      "font-size": "1.1vmin" })
