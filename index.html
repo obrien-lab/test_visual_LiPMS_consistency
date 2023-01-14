@@ -789,8 +789,7 @@ var StructSelect = createSelect([
   [ "1zmr_18_rebuilt&387&43-164&(13-23)&1zmr&A&0&(138) or (22)&(1-387)&0.915&0.027&[18 17  1 15]&<tr><td>M138</td><td>-1.071</td><td>2.087</td></tr><tr><td>L22</td><td>-1.359</td><td>2.916</td></tr>", "1zmr/1/1" ],
   [ "1zmr_23_rebuilt&387&126-149&(4-14)&1zmr&A&0&(138) or (22) or (56)&(1-387)&0.916&0.038&[23]&<tr><td>M138</td><td>-1.071</td><td>2.087</td></tr><tr><td>L22</td><td>-1.359</td><td>2.916</td></tr><tr><td>V56</td><td>-1.023</td><td>2.965</td></tr>", "1zmr/3/8" ],
   [ "1zmr_23_rebuilt&387&40-166&(5-15)&1zmr&A&0&(138) or (22) or (56)&(1-387)&0.916&0.038&[23]&<tr><td>M138</td><td>-1.071</td><td>2.087</td></tr><tr><td>L22</td><td>-1.359</td><td>2.916</td></tr><tr><td>V56</td><td>-1.023</td><td>2.965</td></tr>", "1zmr/3/2" ],
-  [ "1zmr_23_rebuilt&387&40-139&(12-22)&1zmr&A&0&(138) or (22) or (56)&(1-387)&0.916&0.038&[23]&<tr><td>M138</td><td>-1.071</td><td>2.087</td></tr><tr><td>L22</td><td>-1.359</td><td>2.916</td></tr><tr><td>V56</td><td>-1.023</td><td>2.965</td></tr>", "1zmr/3/1" ],], {
-  onchange: function (e) {
+  [ "1zmr_23_rebuilt&387&40-139&(12-22)&1zmr&A&0&(138) or (22) or (56)&(1-387)&0.916&0.038&[23]&<tr><td>M138</td><td>-1.071</td><td>2.087</td></tr><tr><td>L22</td><td>-1.359</td><td>2.916</td></tr><tr><td>V56</td><td>-1.023</td><td>2.965</td></tr>", "1zmr/3/1" ],  onchange: function (e) {
     loadStructure(e.target.value)
   }
 }, { top: "20%", 
@@ -968,6 +967,7 @@ loadStructure(StructSelect.value)
 
 
 <div id="bottom_div" style="width:80%; height:25%; margin-left: 10%; margin-top: 1%;", class="scroll">
+"Summary of entangled state representative entanglement makeup"
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1261,8 +1261,8 @@ loadStructure(StructSelect.value)
       <td>[[8], []]</td>
     </tr>
   </tbody>
-</table>
-"\nStatistical permutation test for model consistency with LiP-MS data"
+</table>""
+"Statistical permutation test for model consistency with LiP-MS data"
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1349,7 +1349,6 @@ loadStructure(StructSelect.value)
       <td>7</td>
     </tr>
   </tbody>
-</table>
-</div>
+</table></div>
 </body>
 </html>
