@@ -961,7 +961,7 @@ loadStructure(StructSelect.value)
 
 <?php
 echo "<html><body><table>\n\n";
-$f = fopen("https://github.com/obrien-lab/test_visual_LiPMS_consistency/blob/master/summary_rep_ents.csv", "r");
+$f = fopen("summary_rep_ents.csv", "r");
 while (($line = fgetcsv($f)) !== false) {
         echo "<tr>";
         foreach ($line as $cell) {
