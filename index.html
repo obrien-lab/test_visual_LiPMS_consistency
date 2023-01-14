@@ -957,65 +957,6 @@ loadStructure(StructSelect.value)
 
 <HR style="margin-top: 1%;" width="80%" color=#987cb9 SIZE=3>
 
-<div id="bottom_div" style="width:80%; height:25%; margin-left: 10%; margin-top: 1%;">
-    <div id="video" style="float: left; width:30%; height:100%;">
-      <iframe width="100%" height="90%" src="https://www.youtube.com/embed/p-VhJf7XFLM" allow="fullscreen">
-      </iframe>
-      <a target="_blank" onclick="openVideo('./Visualize Entanglements in Misfolded Protein Structures.mp4')">
-        <div style="padding-top: 2%; font-family: Arial; font-size: 1.6vmin; cursor: pointer;" onmouseover="this.style.color='orange';" onmouseout="this.style.color='black';">
-          Click this to watch the video if YouTube is not accessible.
-        </div>
-      </a>
-      <script type="text/javascript">
-        function openVideo(src) {
-          var page = window.open();
-          var html="<body style='background:black'><div style='width:80%;margin:auto;'><video controls width='100%' autoplay src='"+src+ "'></video></div></body>"
-          page.document.write(html);
-        }
-      </script>
-    </div>
-    <div id="comment" style="float: right; width:68%; height:76%;">
-      <div class="main_text">
-        <p>Watch this video to see how we identify the entanglement as deep or shallow.</p>
-        <p>Details of the definition of parameter <i>G</i> that is used to detect the topological entanglement for a given protein structure can be found <a href="https://github.com/obrien-lab/cg_simtk_protein_folding/wiki/calc_entanglement_number.pl#4-basic-theory" target="_blank">here</a>.</p>
-      </div>
-      <div class="notes" style="width:100%; height:100%;">
-        <div style="float:left; width:85%; vertical-align: top;">
-          <p><b>Please note:</b> If you consider a consecutive backbone between the threading segment and the closed loop, the shallow entanglement of DHFR state P2 will have 0 linking number, i.e., <i>g</i><sub>C</sub> = 0. However, we excluded 4 residues before and after the closed loop when we calculated the <i>G</i> metric, which yields <i>g</i><sub>C</sub> = 1. The topology graph of DHFR state P2 with consecutive backbone is shown on the right.</p>
-        </div>
-        <div style="float: right; width:12%; vertical-align: top;">
-          <svg style="vertical-align: top;" viewBox="0 0 64 64">
-            <path d="M28 50 C28 48 28 46 24 44 C10 38 8 12 32 12 C56 12 54 38 40 44 C36 46 36 48 36 50" stroke="white" stroke-width="5%" fill="none"></path>
-            <path d="M28 50 C28 48 28 46 24 44 C10 38 8 12 32 12 C56 12 54 38 40 44 C36 46 36 48 36 50" stroke="red" stroke-width="3.5%" fill="none"></path> 
-            <path d="M42 52 C44 48 38.48190217326439 40.4886592300064 40.48190217326439 36.4886592300064" stroke="white" stroke-width="5%" fill="none"></path>
-            <path d="M42 52 C44 48 38.48190217326439 40.4886592300064 40.48190217326439 36.4886592300064" stroke="blue" stroke-width="3.5%" fill="none"></path> 
-            <path d="M22 52 C24 56 28 54 28 50" stroke="white" stroke-width="5%" fill="none"></path>
-            <path d="M22 52 C24 56 28 54 28 50" stroke="gray" stroke-width="3.5%" fill="none"></path> 
-            <path d="M36 50 C36 54 40 56 42 52" stroke="white" stroke-width="5%" fill="none"></path>
-            <path d="M36 50 C36 54 40 56 42 52" stroke="blue" stroke-width="3.5%" fill="none"></path> 
-            <path d="M22 52 C20 48 8 54 4 52" stroke="white" stroke-width="5%" fill="none"></path>
-            <path d="M22 52 C20 48 8 54 4 52" stroke="gray" stroke-width="3.5%" fill="none"></path> 
-            <text text-anchor="start" fill="black" font-size="40%" font-family="Arial" x="1" y="58"> N-ter </text> 
-            <path d="M40.48190217326439 36.4886592300064 C42.48190217326439 32.4886592300064 46.96380434652878 48.977318460012796 48.96380434652878 44.977318460012796" stroke="white" stroke-width="5%" fill="none"></path>
-            <path d="M40.48190217326439 36.4886592300064 C42.48190217326439 32.4886592300064 46.96380434652878 48.977318460012796 48.96380434652878 44.977318460012796" stroke="blue" stroke-width="3.5%" fill="none"></path> 
-            <path d="M48.96380434652878 44.977318460012796 C50.96380434652878 40.977318460012796 56 46.977318460012796 60 44.977318460012796" stroke="white" stroke-width="5%" fill="none"></path>
-            <path d="M48.96380434652878 44.977318460012796 C50.96380434652878 40.977318460012796 56 46.977318460012796 60 44.977318460012796" stroke="gray" stroke-width="4%" fill="none"></path> 
-            <text text-anchor="end" fill="black" font-size="40%" font-family="Arial" x="63" y="50.977318460012796"> C-ter </text> 
-            <line x1="28" y1="50" x2="36" y2="50" stroke="orange" stroke-width="4%" stroke-dasharray="1% 0.5%"></line> 
-            <circle cx="28" cy="50" r="2" stroke="black" stroke-width="1.5%" fill="orange"></circle> 
-            <circle cx="36" cy="50" r="2" stroke="black" stroke-width="1.5%" fill="orange"></circle> 
-            <text text-anchor="end" fill="black" font-size="40%" font-family="Arial" x="30" y="60"> 7 </text> 
-            <text text-anchor="start" fill="black" font-size="40%" font-family="Arial" x="34" y="60"> 112 </text> 
-            <text text-anchor="middle" fill="black" font-size="40%" font-family="Arial" x="32" y="8"> <tspan> <tspan font-style="italic">g</tspan><tspan font-size="70%" baseline-shift="sub">N</tspan> = 0; <tspan font-style="italic">g</tspan><tspan font-size="70%" baseline-shift="sub">C</tspan> = 0 </tspan> </text>
-          </svg>
-        </div>
-      </div>
-    </div>
-    <div class="footnotes" style="float: right; width:68%; height:18%; margin-top: 1%;">
-      <p style="text-align: justify;">Cited by: Jiang, Y., et al. How synonymous mutations alter enzyme structure and function over long timescales. <i>Nature Chemistry</i>, 2022. (In Press; <a href="https://www.nature.com/articles/s41557-022-01091-z" target="_blank">link to the paper</a>)</p>
-      <p>Created by <a href="https://orcid.org/0000-0003-1100-9177" target="_blank">Yang Jiang</a> at July 2020. Last updated at May 2022.</p>
-    </div>
-  </div>
 
 </body>
 </html>
