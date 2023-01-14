@@ -77,6 +77,32 @@
         padding: 5px;
       }
     </style>
+   
+    <link rel=”stylesheet” type=”text/css” href=”csvtable.css” title=”style” /> 
+    <script type=”text/javascript” src=”js/jquery-1.4.2.min.js”></script> 
+    <script type=”text/javascript” src=”js/jquery.csvToTable.js”></script> 
+    <script type=”text/javascript” src=”js/jquery.tablesorter.dev.js”></script>
+    <script> 
+        $(function() { 
+            $.get(‘example.csv’, function(data) { 
+                $(‘#CSVSource’).html(‘<pre>’ + data + ‘</pre>’); 
+                                     }); 
+                $(‘#CSVTable’).CSVToTable(‘https://github.com/obrien-lab/test_visual_LiPMS_consistency/blob/master/1zmr_summary_rep_ents.csv’, { 
+                    loadingImage: ‘images/loading.gif’, startLine: 0 
+                }); 
+                $.get(‘test.tsv’, function(data) { 
+                    $(‘#TSVSource’).html(‘<pre>’ + data + ‘</pre>’); 
+                                         }); 
+                    $(‘#TSVTable’).CSVToTable(‘test.tsv’, { 
+                        loadingText: ‘Loading TSV Data…’, loadingImage: ‘images/loading.gif’, startLine: 0, separator: “\t” }); 
+                    $(‘#CSVTable2’).CSVToTable(‘example.csv’, { 
+                        loadingImage: ‘images/loading.gif’, startLine: 1, headers: [‘Album Title’, ‘Artist Name’, ‘Price ($USD)’] }).bind(“loadComplete”,function() {
+                    $(‘#CSVTable2’).find(‘TABLE’).tablesorter(); 
+                });; 
+            }); 
+    </script>
+    
+    
 </head>
 
 <html>
@@ -958,33 +984,11 @@ loadStructure(StructSelect.value)
 <HR style="margin-top: 1%;" width="80%" color=#987cb9 SIZE=3>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
-<script>
-    function arrayToTable(tableData) {
-        var table = $('<table></table>');
-        $(tableData).each(function (i, rowData) {
-            var row = $('<tr></tr>');
-            $(rowData).each(function (j, cellData) {
-                row.append($('<td>'+cellData+'</td>'));
-            });
-            table.append(row);
 
-        });
-        return table;
-
-    }
-
-    $.ajax({
-        type: "GET",
-        url: "https://github.com/obrien-lab/test_visual_LiPMS_consistency/blob/master/1zmr_summary_rep_ents.csv",
-        success: function (data) {
-            $('body').append(arrayToTable(Papa.parse(data).data));
-        }
-
-    });
-</script>
-
+<div id="CSVSource">
+</div>
+<div id="CSVTable">
+</div>
 
 
 </body>
