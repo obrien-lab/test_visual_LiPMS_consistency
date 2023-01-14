@@ -76,6 +76,17 @@
       th, td {
         padding: 5px;
       }
+        
+      div.scroll {
+        background-color: #fed9ff;
+        width: 600px;
+        height: 150px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        text-align: center;
+        padding: 20px;
+      }
+        
     </style>
 </head>
 
@@ -955,7 +966,7 @@ loadStructure(StructSelect.value)
 <HR style="margin-top: 1%;" width="80%" color=#987cb9 SIZE=3>
 
 
-<div id="bottom_div" style="width:80%; height:25%; margin-left: 10%; margin-top: 1%;">
+<div id="bottom_div" style="width:80%; height:25%; margin-left: 10%; margin-top: 1%;", class="scroll">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1336,6 +1347,7 @@ loadStructure(StructSelect.value)
       <td>7</td>
     </tr>
   </tbody>
-</table></div>
+</table>
+</div>
 </body>
 </html>
