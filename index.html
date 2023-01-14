@@ -977,7 +977,7 @@ loadStructure(StructSelect.value)
 
     $.ajax({
         type: "GET",
-        url: "http://localhost/test/data.csv",
+        url: "1zmr_summary_rep_ents.csv",
         success: function (data) {
             $('body').append(arrayToTable(Papa.parse(data).data));
         }
