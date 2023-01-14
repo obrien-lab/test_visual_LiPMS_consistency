@@ -977,7 +977,7 @@ loadStructure(StructSelect.value)
 
     $.ajax({
         type: "GET",
-        url: "1zmr_summary_rep_ents.csv",
+        url: "https://github.com/obrien-lab/test_visual_LiPMS_consistency/blob/master/1zmr_summary_rep_ents.csv",
         success: function (data) {
             $('body').append(arrayToTable(Papa.parse(data).data));
         }
