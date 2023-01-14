@@ -959,19 +959,20 @@ loadStructure(StructSelect.value)
 
 <HR style="margin-top: 1%;" width="80%" color=#987cb9 SIZE=3>
 
-<?php
-echo "<html><body><table>\n\n";
-$f = fopen("summary_rep_ents.csv", "r");
-while (($line = fgetcsv($f)) !== false) {
-        echo "<tr>";
-        foreach ($line as $cell) {
-                echo "<td>" . htmlspecialchars($cell) . "</td>";
-        }
-        echo "</tr>\n";
-}
-fclose($f);
-echo "\n</table></body></html>";
-
+<div>
+    <?php
+    echo "<html><body><table>\n\n";
+    $f = fopen("summary_rep_ents.csv", "r");
+    while (($line = fgetcsv($f)) !== false) {
+            echo "<tr>";
+            foreach ($line as $cell) {
+                    echo "<td>" . htmlspecialchars($cell) . "</td>";
+            }
+            echo "</tr>\n";
+    }
+    fclose($f);
+    echo "\n</table></body></html>";
+<\div>
 
 </body>
 </html>
