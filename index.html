@@ -958,7 +958,7 @@ loadStructure(StructSelect.value)
 <HR style="margin-top: 1%;" width="80%" color=#987cb9 SIZE=3>
 
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
 <script>
     function arrayToTable(tableData) {
@@ -977,7 +977,7 @@ loadStructure(StructSelect.value)
 
     $.ajax({
         type: "GET",
-        url: "http://github.com/obrien-lab/test_visual_LiPMS_consistency/blob/master/1zmr_summary_rep_ents.csv",
+        url: "https://github.com/obrien-lab/test_visual_LiPMS_consistency/blob/master/1zmr_summary_rep_ents.csv",
         success: function (data) {
             $('body').append(arrayToTable(Papa.parse(data).data));
         }
